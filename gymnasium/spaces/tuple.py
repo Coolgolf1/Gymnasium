@@ -212,9 +212,7 @@ class Tuple(
     def __getitem__(self, index: int) -> Space: ...
     @overload
     def __getitem__(self, index: slice) -> tuple[Space, ...]: ...
-    def __getitem__(
-        self, index: int | slice
-    ) -> Space | tuple[Space, ...]:
+    def __getitem__(self, index: int | slice) -> Space | tuple[Space, ...]:
         """Get the subspace at specific `index`."""
         return self.spaces[index]
 
